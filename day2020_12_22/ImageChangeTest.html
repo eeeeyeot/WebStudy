@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id = "image" src = "drum1.jpg" width = "120" height="100">
+        <script>
+            var index = 1;
+            var files = ["drum1.jpg", "drum2.jpg"];
+            var images = new Array();
+            
+            for(var i = 0; i < images.length; i++) {
+                images[i] = new Image();
+                images[i].src = files[i];
+            }
+
+            function changeImage() {
+                if(++index > 2)
+                    index = 1;
+                document.getElementById("image").src = images[index];
+            }
+        </script>
+
+        <input type = "button" onclick = "changeImage()" value = "click">
+    </body>
+</html>

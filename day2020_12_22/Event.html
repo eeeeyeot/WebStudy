@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            function OnButtonDown(button) {
+                button.style.color = "#ff0000";
+            }
+            function OnButtonUp(button) {
+                button.style.color = "#00ff00";
+            }
+
+
+            // function OnMouseIn(elem) {
+            //     elem.style.border = "2px solid red";
+            // }
+            // function OnMouseOut(elem) {
+            //     elem.style.border = "";
+            // }
+
+
+            // function changeColor(c) {
+            //     document.getElementById("target").style.backgroundColor = c;
+            // }
+
+        </script>
+    </head>
+    <body id = "target">
+
+        <button onmousedown = "OnButtonDown(this)"
+        onmouseup = "OnButtonUp(this)">Press!</button>
+
+
+        <!-- <div style = "background-color: yellow; width: 200px"
+        onmouseover = "OnMouseIn(this)" onmouseout = "OnMouseOut(this)">
+        Mouse move in.
+        </div> -->
+
+
+        <!-- <form method = "post">
+            <input type="radio" name="C1" value="v1"
+            onclick = "changeColor('lightblue')">LightBlue
+            <input type="radio" name="C1" value="v2"
+            onclick = "changeColor('lightgreen')">LightGreen
+        </form> -->
+
+    </body>
+</html>

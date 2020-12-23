@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function checkLength(elem, min, max) {
+                var s = elem.value;
+                if(s.length >= min && s.length <= max) {
+                    alert(s);
+                    return true;
+                }
+                else{
+                    alert(min + "문자와 " + max + "문자 사이로 입력해 주세요!");
+                    elem.focus();
+                    return false;
+                }
+            }
+
+            // function checkNumeric(elem, msg) {
+            //     var exp = /^[0-9]+$/;
+            //     if(elem.value.match(exp)){
+            //         alert(elem.value);
+            //         return true;
+            //     }
+            //     else{
+            //         alert(msg);
+            //         elem.focus();
+            //         return false;
+            //     }
+            // }
+
+            // function checkNotEmpty(field) {
+            //     if(field.value.length == 0) {
+            //         alert("Input yout name.");
+            //         field.focus();
+            //     }
+            //     else {
+            //         alert(field.value);
+            //     }
+            //     return true;
+            // }
+
+            // function check_param() {
+            //     var sname = document.getElementById('tname').value;
+            //     var sbirth = document.getElementById('tbirth').value;
+            //     if(sname == '')
+            //         alert('성명을 입력하세요.');
+            //     else {
+            //         if(sbirth == '')
+            //             alert("생년월일을 입력하세요.");
+            //         else
+            //             alert('입력값이 정상입니다. ' + sname + " : " + sbirth);
+            //     }
+            // }
+        </script>
+    </head>
+    <body>
+        <form>
+            name(6 ~ 8 characters) : <input type = 'text' id = 'name'>
+            <input type="button" onclick = "checkLength(document.getElementById('name'), 6, 8)"
+            value = 'OK'>
+
+            <!-- 전화번호(-없이 입력) : <input type = 'text' id = 'phone'>
+            <input type = 'button' onclick = "checkNumeric(document.getElementById('phone'), '숫자만 입력하세요!')"
+            value = '확인'> -->
+
+            <!-- Name : <input type = 'text' id = 'user'>
+            <input type = 'button' onclick = "checkNotEmpty(document.getElementById('user'))"
+            value = 'OK'> -->
+
+            <!-- 회원가입<br>
+            성명 <input type = "text" id = "tname" name = "name"><br>
+            생년월일 <input type = "text" id = "tbirth" name = "birth"><br>
+            <input type="button" value="확인" onclick = "check_param()"> -->
+        </form>
+    </body>
+</html>

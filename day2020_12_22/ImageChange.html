@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id = "image" src = "drum1.jpg" width = "120" height="100">
+        <script>
+            var index = 1;
+            function changeImage() {
+                if(++index > 2)
+                    index = 1;
+                document.getElementById("image").src = "drum" + index + ".jpg";
+            }
+        </script>
+
+        <input type = "button" onclick = "changeImage()" value = "click">
+    </body>
+</html>
